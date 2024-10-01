@@ -4,6 +4,9 @@ FROM python:3.12.6-slim
 ## Install sklearn and panda
 RUN python -m pip install scikit-learn pandas
 
+## Install ucimlrepo to obtain data
+RUN python -m pip install ucimlrepo
+
 ## Create a directory for the lab
 RUN mkdir /lab
 WORKDIR /lab
