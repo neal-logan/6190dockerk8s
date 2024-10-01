@@ -1,18 +1,16 @@
-
-from ucimlrepo import fetch_ucirepo 
+import pandas as pd
 
 # fetch dataset 
-infrared_thermography_temperature = fetch_ucirepo(id=925) 
+ir_thermography = pd.read_csv('/data/thermography_data.csv')
   
 # data (as pandas dataframes) 
-X = infrared_thermography_temperature.data.features 
-y = infrared_thermography_temperature.data.targets 
-
+X = ir_thermography.data.features 
+y = ir_thermography.data.targets 
 
 #Use sklearn preprocessing pipeline with one-hot encoding
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoOder
 from sklearn.ensemble import GradientBoostingRegressor
 
 #Identify categorical columns
