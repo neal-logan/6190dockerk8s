@@ -10,6 +10,3 @@ WORKDIR /lab
 
 ## Copy the training files
 COPY ./train.py /lab/train.py
-
-## Copy the data file - TEST ONLY
-COPY ./data/thermography_data.csv /mnt/datalake/thermography_data.csv

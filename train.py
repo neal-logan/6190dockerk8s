@@ -2,7 +2,7 @@ import pandas as pd
 
 
 # fetch dataset 
-ir_thermography = pd.read_csv('/mnt/datalake/thermography_data.csv')
+ir_thermography = pd.read_csv('/mnt/datalake/zeta/zeta/thermography_data.csv')
   
 # X/y split
 X = ir_thermography.drop(columns = ['aveOralF','aveOralM']) #Drop potential targets
@@ -60,6 +60,6 @@ from sklearn.metrics import mean_absolute_error
 
 # Save the model
 import joblib
-joblib.dump(pipeline, '/mnt/datalake/ir_thermography_model.pkl')
+joblib.dump(pipeline, '/mnt/datalake/zeta/zeta/ir_thermography_model.pkl')
 
 print('model created')
